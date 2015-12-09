@@ -361,7 +361,8 @@ namespace range {
 	 	if (dyn_cast<ConstantInt>(inst->getOperand(0)) && dyn_cast<ConstantInt>(inst->getOperand(1))) {
 		    Constant *a = Ops[0];
 		    Constant *b = Ops[1];
-				
+
+		    //need to create a +inf and -inf ConstantInt for comparisons	
 		    //outs() << "get type: " << inst->getOperand(0)->getType() << "\n";
 //		    Value *max = ConstantInt(inst->getOperand(0)->getType(), 0xEFFFFFFFFFFFFFFF);
 //		    Value *min = ConstantInt(inst->getOperand(0)->getType(), 0xFFFFFFFFFFFFFFFF);
